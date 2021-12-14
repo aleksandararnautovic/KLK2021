@@ -1,0 +1,13 @@
+  CREATE TABLE [dbo].[Products] (
+    [Id]          INT           IDENTITY (1, 1) NOT NULL,
+    [Name]        VARCHAR (50)  NOT NULL,
+    [Description] VARCHAR (200) NULL,
+    [ExpityData]  DATETIME      NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+SET IDENTITY_INSERT [dbo].[Products] ON
+INSERT INTO [dbo].[Products] ([Id], [Name], [Description], [ExpityData]) VALUES (1, N'Sladoled Coko-Moko', N'Cokoladni sladoled', N'2020-02-08 12:00:00')
+INSERT INTO [dbo].[Products] ([Id], [Name], [Description], [ExpityData]) VALUES (2, N'Medovaca', N'Rakija 25vol sa medom, 0,33L', N'2040-12-14 16:33:39')
+SET IDENTITY_INSERT [dbo].[Products] OFF
+
